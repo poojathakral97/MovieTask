@@ -1,0 +1,41 @@
+/* src/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .movie-card {
+    text-align: center;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .movie-card p {
+    color: #555;
+  }
+  

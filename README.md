@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+Movie Browser Web Application
+Overview
+The Movie Browser web application allows users to search for movies, filter results, and manage their favorite movies. The application uses the OMDb API to fetch movie data and provides a user-friendly interface with advanced filtering options and a favorites feature.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Running the Application
+Prerequisites
+Node.js (version 14 or later)
+npm (Node Package Manager)
+Installation
+Clone the Repository:
 
-## Available Scripts
+bash
+Copy code
+git clone <repository-url>
+cd <project-directory>
+Install Dependencies:
 
-In the project directory, you can run:
+Ensure you are in the project directory and run:
 
-### `npm start`
+bash
+Copy code
+npm install
+Configure API Key:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Replace the placeholder API key in src/services/movieService.js with your own OMDb API key.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+javascript
+Copy code
+const API_KEY = '4586cd63'; // Replace with your actual OMDb API key
+Start the Development Server:
 
-### `npm test`
+Run the following command to start the application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+Access the Application:
 
-### `npm run build`
+Open your web browser and navigate to http://localhost:3000 to view the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Design Decisions
+Architecture
+Frontend Framework: React was chosen for its component-based architecture, which facilitates a modular and maintainable codebase.
+State Management: Utilized React's useState and useEffect hooks for managing state and handling side effects.
+Routing: Implemented routing using react-router-dom to navigate between pages (Home and Favorites).
+Components
+Header: Provides navigation links to the Home and Favorites pages.
+MovieList: Displays a list of movies with options to add to or remove from favorites.
+SearchBar: Allows users to search for movies by title.
+Filters: Provides options to filter movies by genre, release year range, and rating range.
+FavoritesPage: Displays the list of saved favorite movies and allows users to remove them.
+Accessibility
+Semantic HTML: Used proper HTML elements and attributes to structure content and ensure accessibility.
+Keyboard Navigation: Ensured all interactive elements are accessible via keyboard navigation.
+ARIA Roles: Applied ARIA attributes to enhance accessibility for screen readers.
+Color Contrast: Ensured sufficient contrast between text and background for readability.
+Additional Features
+Infinite Scrolling: Implemented infinite scrolling to handle large numbers of search results efficiently.
+Local Storage: Used browser local storage to save and manage favorite movies.
+Dynamic Filtering: Enabled dynamic filtering of movie results by genre, release year, and rating range.
